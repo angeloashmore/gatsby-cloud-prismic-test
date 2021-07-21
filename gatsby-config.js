@@ -16,5 +16,11 @@ module.exports = {
         releaseID: process.env.PRISMIC_RELEASE_ID,
       },
     },
+    {
+      resolve: 'gatsby-plugin-prismic-previews',
+      options: {
+        repositoryName: 'gatsby-cloud-prismic-test',
+      },
+    },
   ],
 }
