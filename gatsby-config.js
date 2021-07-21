@@ -13,6 +13,7 @@ module.exports = {
           page: require('./customtypes/page.json'),
         },
         linkResolver: require('./src/linkResolver').linkResolver,
+        releaseID: process.env.PRISMIC_RELEASE_ID,
       },
     },
   ],
