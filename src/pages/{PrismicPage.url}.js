@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { Link, graphql } from 'gatsby'
+import * as React from "react";
+import { Link, graphql } from "gatsby";
 
 const PrismicPage = ({ data }) => {
-  const page = data.prismicPage
-  const allPages = data.allPrismicPage.nodes
+  const page = data.prismicPage;
+  const allPages = data.allPrismicPage.nodes;
 
   return (
     <main>
@@ -20,10 +20,10 @@ const PrismicPage = ({ data }) => {
       <h1>{page.data.title.text}</h1>
       <article dangerouslySetInnerHTML={{ __html: page.data.content.html }} />
     </main>
-  )
-}
+  );
+};
 
-export default PrismicPage
+export default PrismicPage;
 
 export const query = graphql`
   query PrismicPage($id: String!) {
@@ -48,4 +48,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
