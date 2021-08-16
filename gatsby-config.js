@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
@@ -8,7 +10,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'gatsby-cloud-prismic-test',
+        repositoryName: process.env.PRISMIC_REPO_NAME,
+        // accessToken: process.env.PRISMIC_API_KEY,
         schemas: {
           page: require('./customtypes/page.json'),
         },
@@ -19,7 +22,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-prismic-previews',
       options: {
-        repositoryName: 'gatsby-cloud-prismic-test',
+        repositoryName: process.env.PRISMIC_REPO_NAME,
+        // accessToken: process.env.PRISMIC_API_KEY,
       },
     },
   ],
