@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: process.env.PRISMIC_REPO_NAME,
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_API_KEY,
         schemas: {
           page: require("./customtypes/page.json"),
@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-prismic-previews",
       options: {
-        repositoryName: process.env.PRISMIC_REPO_NAME,
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_API_KEY,
       },
     },
